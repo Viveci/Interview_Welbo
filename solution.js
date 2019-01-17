@@ -14,7 +14,7 @@ function contains (data,input) {
 }
 
 function binarySearch (data, input) {
-  // initial values for start, middle and end
+  // initial values for start, middle and end points
   let start = 0
   let stop = data.length - 1
   let middle = Math.floor((start + stop) / 2)
@@ -30,6 +30,6 @@ function binarySearch (data, input) {
     // recalculate middle on every iteration
     middle = Math.floor((start + stop) / 2)
   }
-  // if the current middle item is what we're looking for return it's index, else return -1
+  // if the current middle item is what we're looking for return true, else return false. Returning true will break the while loop in contains.
   return (data[middle] !== input) ? false : true
 }
